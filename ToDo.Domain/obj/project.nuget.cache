@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "pfQThdBgtda2GvXHdniU0DtWK52GPlNDZutaoQrK6X9QQAeOdls5aobZJ8mH5yFOZFQfE8a+C/DVWzboo4JGcw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\natan\\OneDrive\\Documentos\\Scripts\\Csharp\\ProjetosDeEstudo\\ToDo\\ToDo.Domain\\ToDo.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\natan\\.nuget\\packages\\fluentvalidation\\11.1.0\\fluentvalidation.11.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

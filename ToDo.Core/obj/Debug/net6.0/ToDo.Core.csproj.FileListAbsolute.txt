@@ -1,0 +1,12 @@
+C:\Users\natan\OneDrive\Documentos\Scripts\Csharp\ProjetosDeEstudo\ToDo\ToDo.Core\bin\Debug\net6.0\ToDo.Core.deps.json
+C:\Users\natan\OneDrive\Documentos\Scripts\Csharp\ProjetosDeEstudo\ToDo\ToDo.Core\bin\Debug\net6.0\ToDo.Core.dll
+C:\Users\natan\OneDrive\Documentos\Scripts\Csharp\ProjetosDeEstudo\ToDo\ToDo.Core\bin\Debug\net6.0\ToDo.Core.pdb
+C:\Users\natan\OneDrive\Documentos\Scripts\Csharp\ProjetosDeEstudo\ToDo\ToDo.Core\obj\Debug\net6.0\ToDo.Core.csproj.AssemblyReference.cache
+C:\Users\natan\OneDrive\Documentos\Scripts\Csharp\ProjetosDeEstudo\ToDo\ToDo.Core\obj\Debug\net6.0\ToDo.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\natan\OneDrive\Documentos\Scripts\Csharp\ProjetosDeEstudo\ToDo\ToDo.Core\obj\Debug\net6.0\ToDo.Core.AssemblyInfoInputs.cache
+C:\Users\natan\OneDrive\Documentos\Scripts\Csharp\ProjetosDeEstudo\ToDo\ToDo.Core\obj\Debug\net6.0\ToDo.Core.AssemblyInfo.cs
+C:\Users\natan\OneDrive\Documentos\Scripts\Csharp\ProjetosDeEstudo\ToDo\ToDo.Core\obj\Debug\net6.0\ToDo.Core.csproj.CoreCompileInputs.cache
+C:\Users\natan\OneDrive\Documentos\Scripts\Csharp\ProjetosDeEstudo\ToDo\ToDo.Core\obj\Debug\net6.0\ToDo.Core.dll
+C:\Users\natan\OneDrive\Documentos\Scripts\Csharp\ProjetosDeEstudo\ToDo\ToDo.Core\obj\Debug\net6.0\refint\ToDo.Core.dll
+C:\Users\natan\OneDrive\Documentos\Scripts\Csharp\ProjetosDeEstudo\ToDo\ToDo.Core\obj\Debug\net6.0\ToDo.Core.pdb
+C:\Users\natan\OneDrive\Documentos\Scripts\Csharp\ProjetosDeEstudo\ToDo\ToDo.Core\obj\Debug\net6.0\ref\ToDo.Core.dll
