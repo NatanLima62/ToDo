@@ -10,6 +10,8 @@ public class Assignment : Base
     public bool Conclued { get; set; }
     public DateTime? ConcluedAt { get; set; }
     public DateTime? DeadLine { get; set; }
+    public DateTime? CreateAt { get; set; }
+    public DateTime? UpdateAt { get; set; }
     
     //Ef Relações
     public User User { get; set; }

@@ -27,6 +27,7 @@ public class AssignmentServices : IAssignmentService
     public async Task<AssignmentDTO> Create(AssignmentDTO assignmentDto)
     {
         var assignment = _mapper.Map<Assignment>(assignmentDto);
+        assignment.CreateAt = DateTime.Now;
         assignment.Validate();
 
         var assignementCreated = await _assignmentRepository.Create(assignment);
@@ -58,6 +59,7 @@ public class AssignmentServices : IAssignmentService
         }
 
         var assignment = _mapper.Map<Assignment>(assignmentDto);
+        assignment.UpdateAt = DateTime.Now;
         assignment.Validate();
 
         var assignmentUpdated = await _assignmentRepository.Update(assignment);

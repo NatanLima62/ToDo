@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ToDo.Infra.Contexts;
 
@@ -11,9 +12,10 @@ using ToDo.Infra.Contexts;
 namespace ToDo.Infra.Migrations
 {
     [DbContext(typeof(TodoContext))]
-    partial class TodoContextModelSnapshot : ModelSnapshot
+    [Migration("20220809145657_migrationUm")]
+    partial class migrationUm
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,6 +53,7 @@ namespace ToDo.Infra.Migrations
                         .HasColumnType("VARCHAR(280)");
 
                     b.Property<int?>("TodoListId")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdateAt")
@@ -120,7 +123,9 @@ namespace ToDo.Infra.Migrations
                 {
                     b.HasOne("ToDo.Domain.Entities.TodoList", "TodoList")
                         .WithMany("Assignments")
-                        .HasForeignKey("TodoListId");
+                        .HasForeignKey("TodoListId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.HasOne("ToDo.Domain.Entities.User", "User")
                         .WithMany("Assignments")

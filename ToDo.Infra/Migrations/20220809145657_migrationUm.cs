@@ -17,9 +17,7 @@ namespace ToDo.Infra.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "VARCHAR(180)", nullable: false),
                     Email = table.Column<string>(type: "VARCHAR(180)", nullable: false),
-                    Password = table.Column<string>(type: "VARCHAR(255)", nullable: false),
-                    CreateAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    UpdateAt = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    Password = table.Column<string>(type: "VARCHAR(255)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -33,9 +31,7 @@ namespace ToDo.Infra.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "VARCHAR(180)", nullable: false),
-                    UserId = table.Column<int>(type: "INTEGER", nullable: false),
-                    CreateAt = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    UpdateAt = table.Column<DateTime>(type: "DATETIME", nullable: true)
+                    UserId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -56,7 +52,7 @@ namespace ToDo.Infra.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Description = table.Column<string>(type: "VARCHAR(280)", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    TodoListId = table.Column<int>(type: "int", nullable: true),
+                    TodoListId = table.Column<int>(type: "int", nullable: false),
                     Conclued = table.Column<byte>(type: "TINYINT", nullable: false, defaultValue: (byte)0),
                     ConcluedAt = table.Column<DateTime>(type: "DATETIME", nullable: true),
                     DeadLine = table.Column<DateTime>(type: "DATETIME", nullable: true),
@@ -70,7 +66,8 @@ namespace ToDo.Infra.Migrations
                         name: "FK_tasks_todos_TodoListId",
                         column: x => x.TodoListId,
                         principalTable: "todos",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_tasks_users_UserId",
                         column: x => x.UserId,

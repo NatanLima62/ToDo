@@ -19,13 +19,5 @@ public class TodoMap : IEntityTypeConfiguration<TodoList>
         builder.Property(todo => todo.UserId)
             .IsRequired()
             .HasColumnType("INTEGER");
-
-        builder.Property(todo => todo.CreateAt)
-            .ValueGeneratedOnAdd()
-            .HasColumnType("DATETIME");
-        
-        builder.Property(todo => todo.UpdateAt)
-            .ValueGeneratedOnAdd()
-            .HasColumnType("DATETIME");
     }
 }

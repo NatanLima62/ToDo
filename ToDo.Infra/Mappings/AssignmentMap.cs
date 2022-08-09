@@ -26,15 +26,15 @@ public class AssignmentMap : IEntityTypeConfiguration<Assignment>
 
         builder.Property(assignment => assignment.ConcluedAt)
             .IsRequired(false)
-            .ValueGeneratedOnUpdate()
-            .HasColumnType("DATETIME");
+            .HasColumnType("DATETIME")
+            .ValueGeneratedOnAdd();
 
         builder.Property(assignment => assignment.CreateAt)
-            .ValueGeneratedOnAdd()
-            .HasColumnType("DATETIME");
+            .HasColumnType("DATETIME")
+            .ValueGeneratedOnAdd();
         
         builder.Property(assignment => assignment.UpdateAt)
-            .ValueGeneratedOnAdd()
-            .HasColumnType("DATETIME");
+            .HasColumnType("DATETIME")
+            .ValueGeneratedOnUpdate();
     }
 }

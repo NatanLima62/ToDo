@@ -15,7 +15,7 @@ public class UpdateAssignmentViewModel
     [Required(ErrorMessage = "O Id da task não pode ser vazio")]
     public int UserId { get; set; }
     
-    public int? TodoId { get; set; }
+    public int? TodoListId { get; set; }
 
     public bool Conclued { get; set; } = false;
     

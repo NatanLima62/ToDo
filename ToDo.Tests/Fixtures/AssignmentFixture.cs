@@ -14,7 +14,7 @@ public class AssignmentFixture
             UserId = new Randomizer().Int(1, 1000),
             Id = new Randomizer().Int(1, 1000),
             Description = new Lorem().Text(),
-            TodoId = new Randomizer().Int(1, 1000),
+            TodoListId = new Randomizer().Int(1, 1000),
             Conclued = false,
             DeadLine = DateTime.Now
         };

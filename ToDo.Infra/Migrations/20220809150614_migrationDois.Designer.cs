@@ -12,8 +12,8 @@ using ToDo.Infra.Contexts;
 namespace ToDo.Infra.Migrations
 {
     [DbContext(typeof(TodoContext))]
-    [Migration("20220809125050_migrationUm")]
-    partial class migrationUm
+    [Migration("20220809150614_migrationDois")]
+    partial class migrationDois
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -38,7 +38,7 @@ namespace ToDo.Infra.Migrations
                         .HasDefaultValue((byte)0);
 
                     b.Property<DateTime?>("ConcluedAt")
-                        .ValueGeneratedOnUpdate()
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("DATETIME");
 
                     b.Property<DateTime?>("CreateAt")
@@ -56,7 +56,7 @@ namespace ToDo.Infra.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdateAt")
-                        .ValueGeneratedOnAdd()
+                        .ValueGeneratedOnUpdate()
                         .HasColumnType("DATETIME");
 
                     b.Property<int>("UserId")
@@ -79,17 +79,9 @@ namespace ToDo.Infra.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<DateTime?>("CreateAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("DATETIME");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("VARCHAR(180)");
-
-                    b.Property<DateTime?>("UpdateAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("DATETIME");
 
                     b.Property<int>("UserId")
                         .HasColumnType("INTEGER");
@@ -109,9 +101,6 @@ namespace ToDo.Infra.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<DateTime?>("CreateAt")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("VARCHAR(180)");
@@ -123,9 +112,6 @@ namespace ToDo.Infra.Migrations
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("VARCHAR(255)");
-
-                    b.Property<DateTime?>("UpdateAt")
-                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
