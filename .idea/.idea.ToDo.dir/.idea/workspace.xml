@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e4bc15d-2f14-4100-bb16-42c6a2ee4d2d" name="Changes" comment="" />
+    <list default="true" id="3e4bc15d-2f14-4100-bb16-42c6a2ee4d2d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ToDo.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ToDo.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDo.Api/bin/Debug/net6.0/ToDo.Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ToDo.Api/bin/Debug/net6.0/ToDo.Api.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDo.Api/bin/Debug/net6.0/ToDo.Api.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ToDo.Api/bin/Debug/net6.0/ToDo.Api.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDo.Api/obj/Debug/net6.0/ToDo.Api.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ToDo.Api/obj/Debug/net6.0/ToDo.Api.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDo.Api/obj/Debug/net6.0/ToDo.Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ToDo.Api/obj/Debug/net6.0/ToDo.Api.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDo.Api/obj/Debug/net6.0/ToDo.Api.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ToDo.Api/obj/Debug/net6.0/ToDo.Api.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDo.Api/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/ToDo.Api/obj/staticwebassets.pack.sentinel" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ProjectId" id="2Cw4WCRubHm27BEPFJ0P9cRksuV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -29,12 +39,15 @@
       <option name="presentableId" value="Default" />
       <updated>1659700343181</updated>
       <workItem from="1659700374162" duration="172000" />
+      <workItem from="1659985605459" duration="115000" />
+      <workItem from="1659985743927" duration="23000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

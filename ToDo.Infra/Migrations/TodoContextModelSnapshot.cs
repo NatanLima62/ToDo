@@ -50,10 +50,7 @@ namespace ToDo.Infra.Migrations
                         .IsRequired()
                         .HasColumnType("VARCHAR(280)");
 
-                    b.Property<int?>("TodoId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TodoListId")
+                    b.Property<int?>("TodoListId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdateAt")
@@ -137,9 +134,7 @@ namespace ToDo.Infra.Migrations
                 {
                     b.HasOne("ToDo.Domain.Entities.TodoList", "TodoList")
                         .WithMany("Assignments")
-                        .HasForeignKey("TodoListId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("TodoListId");
 
                     b.HasOne("ToDo.Domain.Entities.User", "User")
                         .WithMany("Assignments")

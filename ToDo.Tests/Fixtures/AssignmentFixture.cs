@@ -16,7 +16,6 @@ public class AssignmentFixture
             Description = new Lorem().Text(),
             TodoId = new Randomizer().Int(1, 1000),
             Conclued = false,
-            ConcluedAt = DateTime.Now,
             DeadLine = DateTime.Now
         };
     }

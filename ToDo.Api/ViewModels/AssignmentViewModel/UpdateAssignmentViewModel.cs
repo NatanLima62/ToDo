@@ -19,7 +19,5 @@ public class UpdateAssignmentViewModel
 
     public bool Conclued { get; set; } = false;
     
-    public DateTime? ConcluedAt { get; set; }
-    
     public DateTime? DeadLine { get; set; }
 }

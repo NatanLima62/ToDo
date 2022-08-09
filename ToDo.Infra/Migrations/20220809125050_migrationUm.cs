@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ToDo.Infra.Migrations
 {
-    public partial class MigrationsUm : Migration
+    public partial class migrationUm : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -56,11 +56,10 @@ namespace ToDo.Infra.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Description = table.Column<string>(type: "VARCHAR(280)", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    TodoId = table.Column<int>(type: "int", nullable: true),
+                    TodoListId = table.Column<int>(type: "int", nullable: true),
                     Conclued = table.Column<byte>(type: "TINYINT", nullable: false, defaultValue: (byte)0),
                     ConcluedAt = table.Column<DateTime>(type: "DATETIME", nullable: true),
                     DeadLine = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    TodoListId = table.Column<int>(type: "int", nullable: false),
                     CreateAt = table.Column<DateTime>(type: "DATETIME", nullable: true),
                     UpdateAt = table.Column<DateTime>(type: "DATETIME", nullable: true)
                 },
@@ -71,8 +70,7 @@ namespace ToDo.Infra.Migrations
                         name: "FK_tasks_todos_TodoListId",
                         column: x => x.TodoListId,
                         principalTable: "todos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_tasks_users_UserId",
                         column: x => x.UserId,

@@ -6,8 +6,8 @@ public class Assignment : Base
 {
     public string Description { get; set; }
     public int UserId { get; set; }
-    public int? TodoId { get; set; }
-    public bool Conclued { get; set; } = false;
+    public int? TodoListId { get; set; }
+    public bool Conclued { get; set; }
     public DateTime? ConcluedAt { get; set; }
     public DateTime? DeadLine { get; set; }
     
@@ -30,5 +30,17 @@ public class Assignment : Base
         }
 
         return true;
+    }
+
+    public void SetConclued()
+    {
+        Conclued = true;
+        ConcluedAt = DateTime.Now;
+    }
+    
+    public void SetUnconclued()
+    {
+        Conclued = false;
+        ConcluedAt = null;
     }
 }

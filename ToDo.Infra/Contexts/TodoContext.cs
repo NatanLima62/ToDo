@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Reflection;
+using Microsoft.EntityFrameworkCore;
 using ToDo.Domain.Entities;
 using ToDo.Infra.Mappings;
 
@@ -15,12 +16,13 @@ public class TodoContext : DbContext
     public DbSet<TodoList> TodoLists { get; set; }
     public DbSet<Assignment> Assignments { get; set; }
     
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS01;Database=dbToDoList;Trusted_Connection=True;");
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS01;Database=dbTODOdb;Trusted_Connection=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfiguration(new UserMap());
-        modelBuilder.ApplyConfiguration(new TodoMap());
-        modelBuilder.ApplyConfiguration(new AssignmentMap());
+        // modelBuilder.ApplyConfiguration(new UserMap());
+        // modelBuilder.ApplyConfiguration(new TodoMap());
+        // modelBuilder.ApplyConfiguration(new AssignmentMap());
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }
 }

@@ -12,8 +12,8 @@ using ToDo.Infra.Contexts;
 namespace ToDo.Infra.Migrations
 {
     [DbContext(typeof(TodoContext))]
-    [Migration("20220805125811_MigrationsUm")]
-    partial class MigrationsUm
+    [Migration("20220809125050_migrationUm")]
+    partial class migrationUm
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -52,10 +52,7 @@ namespace ToDo.Infra.Migrations
                         .IsRequired()
                         .HasColumnType("VARCHAR(280)");
 
-                    b.Property<int?>("TodoId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TodoListId")
+                    b.Property<int?>("TodoListId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdateAt")
@@ -139,9 +136,7 @@ namespace ToDo.Infra.Migrations
                 {
                     b.HasOne("ToDo.Domain.Entities.TodoList", "TodoList")
                         .WithMany("Assignments")
-                        .HasForeignKey("TodoListId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("TodoListId");
 
                     b.HasOne("ToDo.Domain.Entities.User", "User")
                         .WithMany("Assignments")

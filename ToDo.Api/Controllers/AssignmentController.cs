@@ -5,6 +5,7 @@ using ToDo.Api.Utilities;
 using ToDo.Api.ViewModels.AssignmentViewModel;
 using ToDo.Api.ViewModels.ResultViewModel;
 using ToDo.Core.Exeption;
+using ToDo.Domain.Entities;
 using ToDo.Services.DTOs;
 using ToDo.Services.Interfaces;
 
@@ -159,6 +160,58 @@ public class AssignmentController : ControllerBase
         catch (DomainExeption exeptions)
         {
             return BadRequest(Responses.DomainErrorMessage(exeptions.Message));
+        }
+        catch (Exception e)
+        {
+            return StatusCode(500, Responses.ApplicationErrorMessage());
+        }
+    }
+
+    [HttpPatch]
+    [Authorize]
+    [Route("/api/v1/assignments/mark-as-done/{id}")]
+    public async Task<IActionResult> MarkAsDone(int id)
+    {
+        try
+        {
+            await _assignmentService.MarkAsDone(id);
+
+            return Ok(new ResultViewModel
+            {
+                Message = "Task concluida",
+                Sucess = true,
+                Data = null
+            });
+        }
+        catch (DomainExeption exeption)
+        {
+            return BadRequest(Responses.DomainErrorMessage(exeption.Message));
+        }
+        catch (Exception e)
+        {
+            return StatusCode(500, Responses.ApplicationErrorMessage());
+        }
+    }
+
+    [HttpPatch]
+    [Authorize]
+    [Route("/api/v1/assignments/mark-as-undone/{id}")]
+    public async Task<IActionResult> MarkAsUndone(int id)
+    {
+        try
+        {
+            await _assignmentService.MarkAsUndone(id);
+
+            return Ok(new ResultViewModel
+            {
+                Message = "Task marcada como não concluida",
+                Sucess = true,
+                Data = null
+            });
+        }
+        catch (DomainExeption exeption)
+        {
+            return BadRequest(Responses.DomainErrorMessage(exeption.Message));
         }
         catch (Exception e)
         {

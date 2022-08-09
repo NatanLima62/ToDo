@@ -65,6 +65,24 @@ public class AssignmentServices : IAssignmentService
         return _mapper.Map<AssignmentDTO>(assignmentDto);
     }
 
+    public async Task MarkAsDone(int id)
+    {
+        var assignment = await _assignmentRepository.GetById(id);
+        
+        assignment.SetConclued();
+
+        await _assignmentRepository.Update(assignment);
+    }
+
+    public async Task MarkAsUndone(int id)
+    {
+        var assignment = await _assignmentRepository.GetById(id);
+        
+        assignment.SetUnconclued();
+
+        await _assignmentRepository.Update(assignment);
+    }
+
     public async Task Delete(int id)
     {
         await _assignmentRepository.Delete(id);

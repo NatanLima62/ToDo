@@ -14,9 +14,7 @@ public class CreateAssignmentViewModel
     
     public int? TodoId { get; set; }
     
-    public bool Conclued { get; set; } = false;
-    
-    public DateTime? ConcluedAt { get; set; }
+    public bool Conclued { get; set; }
     
     public DateTime? DeadLine { get; set; }
 }
